@@ -33,8 +33,24 @@ export class TaskEntryComponent implements OnInit {
     // this.clicked.next("This is event emitter clicked!!");
     //this.taskList.push(this.taskEntryForm.value);
     this.tasks.push(this.taskEntryForm.value);
+    this._taskService
+      .postTask(this.taskEntryForm.value)
+      .subscribe((result)=>{
+        console.log(result);
+      });
     this.taskEntryForm.resetForm();
     this.router.navigate(['/thankyou']);
   }
+
+
+  // addMyThought(form: NgForm) {
+  //   console.log('form: ', form.value);
+  //   this.noteSvc
+  //     .addNote(form.value)
+  //     .subscribe((result)=>{
+  //       console.log(result);
+  //     });
+  //   form.resetForm();
+  // }
 
 }

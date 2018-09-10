@@ -1,11 +1,14 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { environment } from './../environments/environment';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class TaskService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   getTasks() {
     return [ 
@@ -15,8 +18,8 @@ export class TaskService {
     ];
   }
 
-  postService() {
-
+  postTask(taskEntry) {
+    return this.http.post(`${environment.api_url}thought`, taskEntry);
   }
   
 }

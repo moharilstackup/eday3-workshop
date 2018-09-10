@@ -1,0 +1,36 @@
+<p>
+  task-entry works!
+</p>
+<H1>ToDO</H1>
+
+<mat-card class="example-card">
+
+
+
+  <mat-card-content>
+    <form #taskEntryForm="ngForm" (ngSubmit)=taskEntry()>
+      <mat-form-field class="example-full-width">
+        <!-- <input  type="text" matInput placeholder="Description" name="description" ngModel> -->
+        <input type="text" name="description" placeholder="Description" ngModel matInput required minlength="5"
+          maxlength="10">
+      </mat-form-field>
+
+
+      <!-- <input type="radio" name="attending" value="yes" ngModel> YES
+        <input type="radio" name="attending" value="no" ngModel> NO -->
+
+      <mat-radio-group name="priority" ngModel>
+        <mat-radio-button value="high">High</mat-radio-button>
+        <mat-radio-button value="medium">Medium</mat-radio-button>
+      </mat-radio-group>
+
+      <button mat-button type="submit">SUBMIT</button>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <!-- <button mat-button>LIKE</button> -->
+    
+  </mat-card-actions>
+
+
+</mat-card>

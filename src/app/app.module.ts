@@ -7,6 +7,7 @@ import { TaskListComponent } from './components/task-list.component';
 import { TaskService } from './task.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
@@ -30,6 +31,7 @@ import { PageNotFoundComponent } from './components/page-not-found.component';
     MatInputModule,
     MatRadioModule,
     FormsModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [TaskService],
